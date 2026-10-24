@@ -6,7 +6,7 @@ Sitio estático del estudio: servicios, proceso, casos, preguntas y contacto por
 
 | Sección   | Contenido                                               |
 | --------- | ------------------------------------------------------- |
-| Hero      | Titular, descripción y dos llamados a la acción         |
+| Hero      | Titular y llamado a ver servicios                       |
 | Servicios | Índice por servicio con ficha, planes y enlace WhatsApp |
 | Proceso   | Pasos de trabajo en cuatro etapas                       |
 | Casos     | Trabajos recientes con problema, solución y resultado   |

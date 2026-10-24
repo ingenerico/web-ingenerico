@@ -29,8 +29,8 @@ Enlace centralizado y validado en tests. Vale lo definido en [§5.1](../AGENTS.m
 | Ruta                       | Rol                              |
 | -------------------------- | -------------------------------- |
 | `index.html`               | Índice, ficha y enlace estáticos |
-| `src/sections/Services/`   | Estilos y módulo de la sección   |
-| `src/scripts/data/site.ts` | Fuente de servicios y planes     |
+| `src/components/Services/` | Estilos y módulo de la sección   |
+| `src/data/site.ts`         | Fuente de servicios y planes     |
 
 ## TESTS
 
@@ -38,5 +38,5 @@ Estático y dinámico coinciden en formato. Se verifica en Playwright y con unit
 
 ## ENLACES INTERNOS RELACIONADOS
 
-- [§7.2](../AGENTS.md#72-patrón-de-secciones-frontend)
+- [§7.2](../AGENTS.md#72-patrón-de-componentes-frontend)
 - [§10.2](../AGENTS.md#102-flujos-playwright)

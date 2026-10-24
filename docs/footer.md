@@ -25,9 +25,9 @@ Maquetado estático en plantilla, incrustado en el build.
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                   | Rol                         |
-| ---------------------- | --------------------------- |
-| `src/sections/Footer/` | Maquetado, estilos y módulo |
+| Ruta                     | Rol                         |
+| ------------------------ | --------------------------- |
+| `src/components/Footer/` | Maquetado, estilos y módulo |
 
 ## TESTS
 
@@ -35,4 +35,4 @@ Estático se verifica en Playwright.
 
 ## ENLACES INTERNOS RELACIONADOS
 
-- [§7.2](../AGENTS.md#72-patrón-de-secciones-frontend)
+- [§7.2](../AGENTS.md#72-patrón-de-componentes-frontend)

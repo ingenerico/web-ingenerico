@@ -22,15 +22,15 @@ Sin datos ni enlaces externos en esta base. Vale lo definido en [§5.1](../AGENT
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                | Rol                                  |
-| ------------------- | ------------------------------------ |
-| `index.html`        | Entrada y contenido estático         |
-| `src/main.ts`       | Cableado inicial                     |
-| `src/styles/`       | Tokens y estilos globales            |
-| `src/sections/`     | Estilos y comportamiento por sección |
-| `src/scripts/core/` | Helpers compartidos                  |
-| `src/scripts/data/` | Datos tipados del sitio              |
-| `public/`           | Archivos estáticos                   |
+| Ruta              | Rol                                  |
+| ----------------- | ------------------------------------ |
+| `index.html`      | Entrada y contenido estático         |
+| `src/main.ts`     | Cableado inicial                     |
+| `src/styles/`     | Tokens y estilos globales            |
+| `src/components/` | Estilos y comportamiento por sección |
+| `src/core/`       | Helpers compartidos                  |
+| `src/data/`       | Datos tipados del sitio              |
+| `public/`         | Archivos estáticos                   |
 
 ## TESTS
 

@@ -75,7 +75,7 @@ Solo menciona una ruta o fragmento de código cuando sea imprescindible para ubi
 ### 5.1. PROHIBIDO, SIN EXCEPCIÓN.
 
 - `npm` (el gestor es **pnpm**).
-- `innerHTML`, `outerHTML`, `insertAdjacentHTML` o concatenar HTML como string con datos. Solo `textContent`, `createElement`/`createElementNS` o plantilla `.html` clonada vía helper compartido `src/scripts/core/template.ts`.
+- `innerHTML`, `outerHTML`, `insertAdjacentHTML` o concatenar HTML como string con datos. Solo `textContent`, `createElement`/`createElementNS` o plantilla `.html` clonada vía helper compartido `src/core/template.ts`.
 - `!important` en CSS.
 - `localStorage` / `sessionStorage` salvo justificación explícita registrada en `docs/` y `STATE.md`. Por defecto el estado vive en memoria y en la URL.
 - Duplicar código: si vas a copiar/pegar una función, estilo o sección, extráelo a un módulo compartido.
@@ -110,7 +110,7 @@ Solo menciona una ruta o fragmento de código cuando sea imprescindible para ubi
 | Herramienta y build | Vite                             | Entorno local y generación de `dist/`.                                                                            |
 | Gestor de paquetes  | pnpm                             | Mantener un solo gestor y versionar `pnpm-lock.yaml`.                                                             |
 | Fuentes             | Fontsource                       | Paquetes `@fontsource/*` importados una vez al inicio del CSS global. Prohibido CDN externo.                      |
-| Iconos              | Lucide vía helper propio         | `src/scripts/core/icons.ts` con `createIcon` + `createElementNS`. Sin set completo ni `innerHTML`.                |
+| Iconos              | Lucide vía helper propio         | `src/core/icons.ts` con `createIcon` + `createElementNS`. Sin set completo ni `innerHTML`.                        |
 | Lint/formato        | Biome                            | Una sola herramienta para TS/CSS/JSON.                                                                            |
 | Tests unitarios     | `node:test`                      | Helpers y lógica pura (formato de precios, construcción de enlaces, datos).                                       |
 | Tests de flujo      | Playwright                       | Tabs de servicios, enlace WhatsApp, FAQ, navegación por anclas, responsive.                                       |
@@ -132,24 +132,24 @@ No añadir frameworks, librerías de estado ni CSS externo para esta fase. Si un
 - Unidades CSS: `px` en todo el proyecto para tamaños (tipografía, espaciado, bordes, radios); prohibido `rem`/`em`. Se admiten `%`, `fr`, `vw`/`vh`/`dvh` y `deg`/`ms` solo donde tengan sentido (proporciones, viewport, ángulos, tiempos).
 - Z-index estricto: la base es `0` (defecto, sin declarar). Cada capa que deba ir encima usa el siguiente entero disponible (`1`, `2`, `3`…), sin saltos ni números altos "por si acaso". El conteo vive en `docs/ui.md` (sección Capas); el próximo nivel libre es el siguiente al máximo registrado.
 - Iconos y fuentes según [§6](#6-stack) (Lucide vía helper, Fontsource empaquetado). Sin SVG sueltos ni librería entera; solo pesos usados y pila en `--font-family-base`.
-- Datos de negocio (servicios, planes, precios, número WhatsApp, enlaces): en un único módulo TS tipado bajo `src/scripts/data/`, con tipos exportados. Prohibido duplicarlos en HTML y JS.
+- Datos de negocio (servicios, planes, precios, número WhatsApp, enlaces): en un único módulo TS tipado bajo `src/data/`, con tipos exportados. Prohibido duplicarlos en HTML y JS.
 - URLs externas: centralizadas, construidas con `encodeURIComponent`, con `target="_blank"` + `rel="noopener"` solo cuando abran pestaña nueva y motivo documentado.
 
-### 7.2. PATRÓN DE SECCIONES FRONTEND.
+### 7.2. PATRÓN DE COMPONENTES FRONTEND.
 
-Cada sección vive en su propia carpeta, sin excepción:
+Cada componente vive en su propia carpeta, sin excepción:
 
 ```text
-src/sections/ServiceTabs/
+src/components/ServiceTabs/
 ├── ServiceTabs.ts
 ├── ServiceTabs.html
 └── ServiceTabs.css
 ```
 
-Toda sección implementa:
+Todo componente implementa:
 
 ```typescript
-export interface Section<Props> {
+export interface Component<Props> {
 	render(props: Props): HTMLElement;
 	destroy(): void;
 }
@@ -158,10 +158,10 @@ export interface Section<Props> {
 Reglas:
 - El `.html` es la fuente única del maquetado y se incrusta en `index.html` durante el build (`<include src="..."></include>`); nunca se construye HTML por strings en el `.ts`.
 - `template.ts` solo clona nodos dinámicos que nacen de datos en tiempo de ejecución.
-- El `.css` solo toca su sección (nesting bajo su clase raíz), salvo tokens globales.
-- `destroy()` es obligatorio siempre que la sección registre listeners, observers o `requestAnimationFrame`.
-- El `index.html` compone secciones con inclusiones y puntos de montaje con `id` estable; el `main.ts` solo hace wiring, sin lógica de negocio.
-- Nada de lógica compartida copiada entre secciones: va a `src/scripts/core/`.
+- El `.css` solo toca su componente (nesting bajo su clase raíz), salvo tokens globales.
+- `destroy()` es obligatorio siempre que el componente registre listeners, observers o `requestAnimationFrame`.
+- El `index.html` compone componentes con inclusiones y puntos de montaje con `id` estable; el `main.ts` solo hace wiring, sin lógica de negocio.
+- Nada de lógica compartida copiada entre componentes: va a `src/core/`.
 
 ### 7.3. REGLA `null` VS `undefined`.
 
@@ -188,17 +188,19 @@ ingenerico/
 │   ├── styles/
 │   │   ├── tokens.css
 │   │   └── styles.css
-│   ├── scripts/
-│   │   ├── core/
-│   │   │   ├── template.ts
-│   │   │   └── icons.ts
-│   │   └── data/
-│   │       └── site.ts
-│   ├── sections/
-│   │   └── <Section>/
-│   │       ├── <Section>.ts
-│   │       ├── <Section>.html
-│   │       └── <Section>.css
+│   ├── core/
+│   │   ├── template.ts
+│   │   ├── icons.ts
+│   │   ├── format.ts
+│   │   ├── whatsapp.ts
+│   │   └── reveal.ts
+│   ├── data/
+│   │   └── site.ts
+│   ├── components/
+│   │   └── <Component>/
+│   │       ├── <Component>.ts
+│   │       ├── <Component>.html
+│   │       └── <Component>.css
 │   └── types/
 ├── tests/
 ├── e2e/

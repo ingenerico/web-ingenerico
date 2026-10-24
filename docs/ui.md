@@ -26,11 +26,11 @@ Sin datos ni enlaces. Vale lo definido en [§5.1](../AGENTS.md#51-prohibido-sin-
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                           | Rol               |
-| ------------------------------ | ----------------- |
-| `src/sections/Hero/Hero.css`   | Nivel de la barra |
-| `src/sections/Cases/Cases.css` | Nivel del brillo  |
-| `src/styles/styles.css`        | Nivel del salto   |
+| Ruta                             | Rol               |
+| -------------------------------- | ----------------- |
+| `src/components/Hero/Hero.css`   | Nivel de la barra |
+| `src/components/Cases/Cases.css` | Nivel del brillo  |
+| `src/styles/styles.css`          | Nivel del salto   |
 
 ## TESTS
 

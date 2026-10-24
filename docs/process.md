@@ -25,10 +25,10 @@ Sin datos ni enlaces. Vale lo definido en [§5.1](../AGENTS.md#51-prohibido-sin-
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                    | Rol                            |
-| ----------------------- | ------------------------------ |
-| `index.html`            | Lista de pasos estática        |
-| `src/sections/Process/` | Estilos y módulo de la sección |
+| Ruta                      | Rol                            |
+| ------------------------- | ------------------------------ |
+| `index.html`              | Lista de pasos estática        |
+| `src/components/Process/` | Estilos y módulo de la sección |
 
 ## TESTS
 
@@ -36,4 +36,4 @@ Estático se verifica en Playwright.
 
 ## ENLACES INTERNOS RELACIONADOS
 
-- [§7.2](../AGENTS.md#72-patrón-de-secciones-frontend)
+- [§7.2](../AGENTS.md#72-patrón-de-componentes-frontend)

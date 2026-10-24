@@ -24,9 +24,9 @@ Enlace centralizado. Vale lo definido en [§5.1](../AGENTS.md#51-prohibido-sin-e
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                | Rol                         |
-| ------------------- | --------------------------- |
-| `src/sections/Cta/` | Maquetado, estilos y módulo |
+| Ruta                  | Rol                         |
+| --------------------- | --------------------------- |
+| `src/components/Cta/` | Maquetado, estilos y módulo |
 
 ## TESTS
 
@@ -34,4 +34,4 @@ Estático se verifica en Playwright.
 
 ## ENLACES INTERNOS RELACIONADOS
 
-- [§7.2](../AGENTS.md#72-patrón-de-secciones-frontend)
+- [§7.2](../AGENTS.md#72-patrón-de-componentes-frontend)

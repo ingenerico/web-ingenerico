@@ -25,12 +25,12 @@ Sin datos ni enlaces. Vale lo definido en [§5.1](../AGENTS.md#51-prohibido-sin-
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                         | Rol                             |
-| ---------------------------- | ------------------------------- |
-| `src/scripts/core/reveal.ts` | Observador de aparición         |
-| `src/main.ts`                | Cableado único                  |
-| `src/styles/styles.css`      | Animación de entrada            |
-| `e2e/reveal.spec.ts`         | Aparición y movimiento reducido |
+| Ruta                    | Rol                             |
+| ----------------------- | ------------------------------- |
+| `src/core/reveal.ts`    | Observador de aparición         |
+| `src/main.ts`           | Cableado único                  |
+| `src/styles/styles.css` | Animación de entrada            |
+| `e2e/reveal.spec.ts`    | Aparición y movimiento reducido |
 
 ## TESTS
 

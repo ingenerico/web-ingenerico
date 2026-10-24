@@ -25,10 +25,10 @@ Sin datos ni enlaces. Vale lo definido en [§5.1](../AGENTS.md#51-prohibido-sin-
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                 | Rol                                 |
-| -------------------- | ----------------------------------- |
-| `src/sections/Hero/` | Maquetado, estilos y comportamiento |
-| `e2e/hero.spec.ts`   | Seguimiento y movimiento reducido   |
+| Ruta                   | Rol                                 |
+| ---------------------- | ----------------------------------- |
+| `src/components/Hero/` | Maquetado, estilos y comportamiento |
+| `e2e/hero.spec.ts`     | Seguimiento y movimiento reducido   |
 
 ## TESTS
 
@@ -36,5 +36,5 @@ Flujos en Playwright.
 
 ## ENLACES INTERNOS RELACIONADOS
 
-- [§7.2](../AGENTS.md#72-patrón-de-secciones-frontend)
+- [§7.2](../AGENTS.md#72-patrón-de-componentes-frontend)
 - [§10.2](../AGENTS.md#102-flujos-playwright)

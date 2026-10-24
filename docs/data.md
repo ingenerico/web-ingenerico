@@ -26,14 +26,14 @@ Enlaces centralizados y validados en tests. Vale lo definido en [§5.1](../AGENT
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                           | Rol                          |
-| ------------------------------ | ---------------------------- |
-| `src/scripts/data/site.ts`     | Tipos, servicios y número    |
-| `src/scripts/core/format.ts`   | Formato de moneda            |
-| `src/scripts/core/whatsapp.ts` | Enlaces y mensajes           |
-| `src/scripts/core/template.ts` | Clonado de plantillas HTML   |
-| `src/scripts/core/icons.ts`    | Iconos vía `createElementNS` |
-| `tests/`                       | Unitarios con `node:test`    |
+| Ruta                   | Rol                          |
+| ---------------------- | ---------------------------- |
+| `src/data/site.ts`     | Tipos, servicios y número    |
+| `src/core/format.ts`   | Formato de moneda            |
+| `src/core/whatsapp.ts` | Enlaces y mensajes           |
+| `src/core/template.ts` | Clonado de plantillas HTML   |
+| `src/core/icons.ts`    | Iconos vía `createElementNS` |
+| `tests/`               | Unitarios con `node:test`    |
 
 ## TESTS
 
