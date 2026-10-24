@@ -25,11 +25,8 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Checklist de lanzamiento.
+Publicar en producción.
 
 ## TAREAS PENDIENTES
 
-- Maquetar contenido base en HTML.
-- Implementar interactividad de secciones.
-- Aplicar pulido de SEO, accesibilidad y rendimiento.
-- Preparar publicación final.
+Sin pendientes.
