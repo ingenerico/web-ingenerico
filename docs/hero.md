@@ -1,0 +1,40 @@
+# HERO
+
+## QUÉ HACE
+
+Portada con titular, llamados y un ojo cuya pupila sigue el cursor.
+
+## POR QUÉ SE IMPLEMENTÓ ASÍ
+
+El seguimiento es mejora progresiva con `requestAnimationFrame`. Sin JS o con movimiento reducido, el ojo queda quieto.
+
+## CÓMO FUNCIONA
+
+`Hero.ts` escucha el puntero, calcula el objetivo desde el centro del SVG e interpola la posición. Todo se libera en `destroy()`.
+
+## REGLAS DE NEGOCIO
+
+| Regla      | Detalle                                  |
+| ---------- | ---------------------------------------- |
+| Movimiento | Solo si el sistema lo permite            |
+| Limpieza   | Listener y cuadro pendientes se cancelan |
+
+## SEGURIDAD ESPECÍFICA
+
+Sin datos ni enlaces. Vale lo definido en [§5.1](../AGENTS.md#51-prohibido-sin-excepción).
+
+## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
+
+| Ruta                 | Rol                                 |
+| -------------------- | ----------------------------------- |
+| `src/sections/Hero/` | Maquetado, estilos y comportamiento |
+| `e2e/hero.spec.ts`   | Seguimiento y movimiento reducido   |
+
+## TESTS
+
+Flujos en Playwright.
+
+## ENLACES INTERNOS RELACIONADOS
+
+- [§7.2](../AGENTS.md#72-patrón-de-secciones-frontend)
+- [§10.2](../AGENTS.md#102-flujos-playwright)
