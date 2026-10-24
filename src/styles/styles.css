@@ -107,6 +107,17 @@ svg {
 	border-color: var(--bone);
 }
 
+.is-revealed {
+	animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@keyframes rise {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+}
+
 .display.large {
 	font-size: clamp(35px, 6.2vw, 83px);
 }
@@ -182,5 +193,9 @@ svg {
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
+	}
+
+	.is-revealed {
+		animation: none;
 	}
 }
