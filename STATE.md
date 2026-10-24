@@ -10,6 +10,13 @@
 | 3    | Pulido         | SEO, accesibilidad, responsive e imágenes                            |
 | 4    | Producción     | Checklist final y publicación estática                               |
 
+## FASE 0 — AVANCE
+
+- [x] Base Vite + TypeScript + Biome con build en verde.
+- [ ] Tokens, estilos base, helpers y datos tipados.
+- [ ] CI en cada push y pull request.
+- [ ] Cierre de Fase 0 (docs al día y gate completo).
+
 ## REGLAS DE TAREAS
 
 - Se trabaja una tarea en especifico solamente.
