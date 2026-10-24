@@ -19,8 +19,8 @@ Corre los pasos en este orden y falla al primero en rojo.
 | Lint y formato | `pnpm exec biome check .`                        |
 | Tipado         | `pnpm exec tsc --noEmit`                         |
 | Unitarios      | `node --test tests/`                             |
-| Flujos         | `pnpm exec playwright test --pass-with-no-tests` |
 | Build          | `pnpm exec vite build`                           |
+| Flujos         | `pnpm exec playwright test --pass-with-no-tests` |
 | Dependencias   | `pnpm audit --audit-level critical`              |
 
 ## SEGURIDAD ESPECÍFICA
@@ -36,7 +36,7 @@ La auditoría falla ante CVE crítico. Sin secretos en el workflow.
 
 ## TESTS
 
-El workflow es el test del gate. Los flujos reales llegan en Fase 2; mientras tanto corre con `--pass-with-no-tests`.
+El workflow es el test del gate. Los flujos corren contra el `dist/` recién construido.
 
 ## ENLACES INTERNOS RELACIONADOS
 

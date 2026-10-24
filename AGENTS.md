@@ -234,8 +234,8 @@ GitHub Actions ejecuta en cada push y pull request:
 1. `biome check`;
 2. `tsc --noEmit`;
 3. tests unitarios;
-4. Playwright de flujos críticos;
-5. `vite build`;
+4. `vite build`;
+5. Playwright de flujos críticos;
 6. auditoría de dependencias (falla ante CVE crítico).
 
 Un PR no se considera listo si CI está en rojo.
