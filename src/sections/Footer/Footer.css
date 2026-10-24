@@ -29,19 +29,14 @@ footer a.mono:hover {
 	color: var(--yellow);
 }
 
-footer .col.center,
 footer .col.end {
 	text-align: left;
 }
 
 @media (width > 640px) {
 	footer .wrap {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		gap: 24px;
-	}
-
-	footer .col.center {
-		text-align: center;
 	}
 
 	footer .col.end {
