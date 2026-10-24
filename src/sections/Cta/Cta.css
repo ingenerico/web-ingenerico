@@ -1,0 +1,61 @@
+.cta-band {
+	background: var(--yellow);
+	color: var(--ink);
+	padding: clamp(56px, 9vw, 120px) 0;
+	margin-top: clamp(72px, 10vw, 128px);
+	border-top: 1px solid var(--ink);
+	position: relative;
+	overflow: hidden;
+}
+
+.cta-band::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(
+		90deg,
+		transparent 0 60px,
+		rgb(17 17 16 / 0.04) 60px 61px
+	);
+	pointer-events: none;
+}
+
+.cta-band .row {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 32px;
+	align-items: end;
+	position: relative;
+}
+
+.cta-band .display {
+	font-size: clamp(35px, 6.5vw, 80px);
+	line-height: 0.98;
+}
+
+.cta-band .meta {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.cta-band .meta p {
+	margin: 0;
+	max-width: 28ch;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.cta-band .meta .mono {
+	opacity: 0.6;
+	color: var(--ink);
+}
+
+@media (width > 900px) {
+	.cta-band .row {
+		grid-template-columns: 1.55fr 0.9fr;
+		gap: clamp(32px, 5vw, 72px);
+	}
+}

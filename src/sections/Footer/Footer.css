@@ -1,0 +1,50 @@
+footer {
+	background: var(--dark);
+	color: var(--bone);
+	padding: 34px 0;
+
+	& .wrap {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 18px;
+		align-items: center;
+	}
+}
+
+footer .col {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+
+footer .mono {
+	color: rgb(239 237 230 / 0.5);
+}
+
+footer a.mono {
+	transition: color 0.15s;
+}
+
+footer a.mono:hover {
+	color: var(--yellow);
+}
+
+footer .col.center,
+footer .col.end {
+	text-align: left;
+}
+
+@media (width > 640px) {
+	footer .wrap {
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 24px;
+	}
+
+	footer .col.center {
+		text-align: center;
+	}
+
+	footer .col.end {
+		text-align: right;
+	}
+}
