@@ -17,33 +17,32 @@ Sitio estático del estudio: servicios, proceso, casos, preguntas y contacto por
 
 ```text
 ingenerico/
+├── .github/
 ├── index.html
 ├── public/
-│   ├── images/
-│   └── favicon.svg
 ├── src/
-│   ├── main.ts
-│   ├── styles/
-│   ├── scripts/
-│   └── sections/
 ├── tests/
 ├── e2e/
 ├── docs/
 ├── AGENTS.md
 ├── STATE.md
-└── README.md
+├── README.md
+├── biome.json
+├── playwright.config.ts
+├── pnpm-workspace.yaml
+└── package.json
 ```
 
 Detalle completo en `AGENTS.md` y `docs/`.
 
 ## DESARROLLO LOCAL
 
-| Paso      | Comando                    |
-| --------- | -------------------------- |
-| Instalar  | `pnpm install`             |
-| Servidor  | `pnpm dev`                 |
-| Verificar | `pnpm check` + `pnpm test` |
-| Construir | `pnpm build`               |
+| Paso      | Comando                                |
+| --------- | -------------------------------------- |
+| Instalar  | `pnpm install`                         |
+| Servidor  | `pnpm dev`                             |
+| Verificar | `pnpm check`, `pnpm test` y `pnpm e2e` |
+| Construir | `pnpm build`                           |
 
 ## PUBLICACIÓN
 
