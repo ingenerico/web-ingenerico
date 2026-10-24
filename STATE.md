@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Maquetar sección de preguntas en HTML.
+Maquetar cierre y pie en HTML.
 
 ## TAREAS PENDIENTES
 
