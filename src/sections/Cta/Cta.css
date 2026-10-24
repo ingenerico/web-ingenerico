@@ -40,16 +40,9 @@
 	align-items: flex-start;
 }
 
-.cta-band .meta p {
-	margin: 0;
-	max-width: 28ch;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 1.5;
-}
-
-.cta-band .meta .mono {
-	opacity: 0.6;
+.cta-band .meta .btn:hover {
+	background: var(--yellow);
+	border-color: var(--ink);
 	color: var(--ink);
 }
 

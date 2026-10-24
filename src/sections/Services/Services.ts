@@ -72,20 +72,13 @@ function buildSpec(service: Service, selectedPlan: number): HTMLElement {
 	const spec = document.createElement("div");
 	spec.className = "spec";
 
-	const caption = document.createElement("h4");
-	caption.textContent = "Ficha técnica · Cotización";
-
 	const title = document.createElement("p");
 	title.className = "title";
 	title.textContent = "Elige por dónde empezar";
 
 	const link = document.createElement("a");
-	link.className = "btn full";
+	link.className = "btn btn-yellow full";
 	link.textContent = "Agendar por WhatsApp →";
-
-	const note = document.createElement("p");
-	note.className = "note";
-	note.textContent = "Te escribimos con tu opción ya elegida. Sin compromiso.";
 
 	const updateLink = (planIndex: number): void => {
 		link.href = contactUrl(service, planIndex);
@@ -119,7 +112,7 @@ function buildSpec(service: Service, selectedPlan: number): HTMLElement {
 	});
 
 	updateLink(selectedPlan);
-	spec.append(caption, title, link, note);
+	spec.append(title, link);
 	return spec;
 }
 

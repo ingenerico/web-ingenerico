@@ -108,21 +108,33 @@ svg {
 }
 
 .btn:hover {
-	background: var(--red);
-	border-color: var(--red);
-	color: #fff;
+	background: var(--yellow);
+	border-color: var(--yellow);
+	color: var(--ink);
 }
 
-.btn.ghost {
+.btn-yellow {
+	background: var(--yellow);
+	color: var(--ink);
+	border-color: var(--yellow);
+}
+
+.btn-yellow:hover {
+	background: var(--ink);
+	border-color: var(--yellow);
+	color: var(--bone);
+}
+
+.btn-outline {
 	background: transparent;
 	color: var(--bone);
-	border-color: rgb(239 237 230 / 0.4);
+	border-color: var(--bone);
 }
 
-.btn.ghost:hover {
-	background: var(--bone);
+.btn-outline:hover {
+	background: var(--yellow);
+	border-color: var(--yellow);
 	color: var(--ink);
-	border-color: var(--bone);
 }
 
 .is-revealed {

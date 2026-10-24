@@ -160,16 +160,6 @@
 	opacity: 0.9;
 }
 
-.spec h4 {
-	margin: 0 0 6px;
-	font-family: var(--font-family-mono);
-	font-size: 11px;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	color: var(--yellow);
-	font-weight: 500;
-}
-
 .spec .title {
 	font-weight: 700;
 	font-size: 19px;
@@ -242,25 +232,6 @@
 	width: 100%;
 	justify-content: center;
 	margin-top: 18px;
-	background: var(--yellow);
-	color: var(--ink);
-	border-color: var(--yellow);
-}
-
-.spec .btn:hover {
-	background: #fff;
-	border-color: #fff;
-	color: var(--ink);
-}
-
-.spec .note {
-	font-family: var(--font-family-mono);
-	font-size: 10px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: var(--muted-on-dark);
-	margin: 14px 0 0;
-	line-height: 1.55;
 }
 
 @media (width > 900px) {
