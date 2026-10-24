@@ -10,6 +10,9 @@ const CENTER_Y = 200;
 const MAX_X = 22;
 const MAX_Y = 14;
 const FOLLOW_DISTANCE = 340;
+const IDLE_DELAY = 3000;
+const WANDER_X = 12;
+const WANDER_Y = 8;
 const EASE = 0.14;
 const STOP_THRESHOLD = 0.3;
 
@@ -43,13 +46,22 @@ export function renderHero(): HeroComponent {
 	let targetY = CENTER_Y;
 	let currentX = CENTER_X;
 	let currentY = CENTER_Y;
+	let lastInput = 0;
+	let idleTimer: number | null = null;
 
 	const step = (): void => {
+		if (performance.now() - lastInput > IDLE_DELAY) {
+			const time = performance.now() / 1000;
+			targetX = CENTER_X + Math.cos(time * 0.5) * WANDER_X;
+			targetY = CENTER_Y + Math.sin(time * 0.7) * WANDER_Y;
+		}
 		currentX += (targetX - currentX) * EASE;
 		currentY += (targetY - currentY) * EASE;
 		pupil?.setAttribute("cx", String(currentX));
 		pupil?.setAttribute("cy", String(currentY));
+		const wandering = performance.now() - lastInput > IDLE_DELAY;
 		if (
+			wandering ||
 			Math.abs(targetX - currentX) > STOP_THRESHOLD ||
 			Math.abs(targetY - currentY) > STOP_THRESHOLD
 		) {
@@ -70,6 +82,12 @@ export function renderHero(): HeroComponent {
 	).matches;
 	const svg = pupil?.ownerSVGElement ?? null;
 	if (pupil !== null && svg !== null && !reduceMotion) {
+		const kick = (): void => {
+			if (idleTimer !== null) {
+				window.clearTimeout(idleTimer);
+			}
+			idleTimer = window.setTimeout(schedule, IDLE_DELAY);
+		};
 		window.addEventListener(
 			"pointermove",
 			(event) => {
@@ -80,10 +98,13 @@ export function renderHero(): HeroComponent {
 				const distance = Math.min(1, Math.hypot(dx, dy) / FOLLOW_DISTANCE);
 				targetX = CENTER_X + Math.cos(angle) * MAX_X * distance;
 				targetY = CENTER_Y + Math.sin(angle) * MAX_Y * distance;
+				lastInput = performance.now();
+				kick();
 				schedule();
 			},
 			{ signal: controller.signal },
 		);
+		kick();
 	}
 
 	buildTicker(!reduceMotion);
@@ -92,6 +113,10 @@ export function renderHero(): HeroComponent {
 		root,
 		destroy(): void {
 			controller.abort();
+			if (idleTimer !== null) {
+				window.clearTimeout(idleTimer);
+				idleTimer = null;
+			}
 			if (frame !== null) {
 				cancelAnimationFrame(frame);
 				frame = null;

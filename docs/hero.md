@@ -2,7 +2,7 @@
 
 ## QUÉ HACE
 
-Portada con titular, llamado a ver servicios y un ojo cuya pupila sigue el cursor. La cinta inferior se arma desde datos y duplica sus elementos para el bucle.
+Portada con titular, llamado a ver servicios y un ojo cuya pupila sigue el puntero o deriva sola sin interacción. La cinta inferior se arma desde datos y duplica sus elementos para el bucle.
 
 ## POR QUÉ SE IMPLEMENTÓ ASÍ
 
@@ -25,10 +25,10 @@ Sin datos ni enlaces. Vale lo definido en [§5.1](../AGENTS.md#51-prohibido-sin-
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                   | Rol                                 |
-| ---------------------- | ----------------------------------- |
-| `src/components/Hero/` | Maquetado, estilos y comportamiento |
-| `e2e/hero.spec.ts`     | Seguimiento y movimiento reducido   |
+| Ruta                   | Rol                                       |
+| ---------------------- | ----------------------------------------- |
+| `src/components/Hero/` | Maquetado, estilos y comportamiento       |
+| `e2e/hero.spec.ts`     | Seguimiento, deriva y movimiento reducido |
 
 ## TESTS
 
