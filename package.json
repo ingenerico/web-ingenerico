@@ -1,0 +1,19 @@
+{
+	"name": "ingenerico-web",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc --noEmit && vite build",
+		"preview": "vite preview",
+		"check": "biome check .",
+		"test": "node --test tests/"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.0",
+		"@types/node": "^22.10.0",
+		"typescript": "^5.9.3",
+		"vite": "^7.2.4"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.6.2/schema.json",
+	"files": {
+		"includes": ["**", "!ingenerico_demo.html", "!dist"]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"preset": "recommended"
+		}
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"javascript": {
+		"formatter": {
+			"semicolons": "always",
+			"quoteStyle": "double"
+		}
+	}
+}
