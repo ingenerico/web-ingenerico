@@ -12,6 +12,7 @@
 		"noUnusedParameters": true,
 		"skipLibCheck": true,
 		"isolatedModules": true,
+		"allowImportingTsExtensions": true,
 		"useDefineForClassFields": true,
 		"types": ["node"]
 	},
