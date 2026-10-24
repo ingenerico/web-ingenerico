@@ -2,7 +2,7 @@
 
 ## QUÉ HACE
 
-Portada con titular, llamado a ver servicios y un ojo cuya pupila sigue el cursor.
+Portada con titular, llamado a ver servicios y un ojo cuya pupila sigue el cursor. La cinta inferior se arma desde datos y duplica sus elementos para el bucle.
 
 ## POR QUÉ SE IMPLEMENTÓ ASÍ
 
