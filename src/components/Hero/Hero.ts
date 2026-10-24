@@ -1,6 +1,6 @@
-import { TICKER_ITEMS } from "../../scripts/data/site.ts";
+import { TICKER_ITEMS } from "../../data/site.ts";
 
-export interface HeroSection {
+export interface HeroComponent {
 	readonly root: HTMLElement;
 	destroy(): void;
 }
@@ -31,7 +31,7 @@ function buildTicker(allowMotion: boolean): void {
 	}
 }
 
-export function renderHero(): HeroSection {
+export function renderHero(): HeroComponent {
 	const root: HTMLElement | null = document.querySelector("#inicio");
 	if (root === null) {
 		throw new Error("Missing #inicio mount point");

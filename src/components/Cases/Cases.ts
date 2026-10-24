@@ -1,9 +1,9 @@
-export interface CasesSection {
+export interface CasesComponent {
 	readonly root: HTMLElement;
 	destroy(): void;
 }
 
-export function renderCases(): CasesSection {
+export function renderCases(): CasesComponent {
 	const root: HTMLElement | null = document.querySelector("#casos");
 	if (root === null) {
 		throw new Error("Missing #casos mount point");

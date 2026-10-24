@@ -1,10 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import {
-	SERVICES,
-	TICKER_ITEMS,
-	WHATSAPP_NUMBER,
-} from "../src/scripts/data/site.ts";
+import { SERVICES, TICKER_ITEMS, WHATSAPP_NUMBER } from "../src/data/site.ts";
 
 describe("site data", () => {
 	it("lists ticker items without duplicates", () => {

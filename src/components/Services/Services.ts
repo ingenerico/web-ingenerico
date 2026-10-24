@@ -1,15 +1,11 @@
-import { formatCOP } from "../../scripts/core/format.ts";
+import { formatCOP } from "../../core/format.ts";
 import {
 	buildDiagnosisMessage,
 	buildWhatsAppUrl,
-} from "../../scripts/core/whatsapp.ts";
-import {
-	SERVICES,
-	type Service,
-	WHATSAPP_NUMBER,
-} from "../../scripts/data/site.ts";
+} from "../../core/whatsapp.ts";
+import { SERVICES, type Service, WHATSAPP_NUMBER } from "../../data/site.ts";
 
-export interface ServicesSection {
+export interface ServicesComponent {
 	readonly root: HTMLElement;
 	destroy(): void;
 }
@@ -116,7 +112,7 @@ function buildSpec(service: Service, selectedPlan: number): HTMLElement {
 	return spec;
 }
 
-export function renderServices(): ServicesSection {
+export function renderServices(): ServicesComponent {
 	const root: HTMLElement | null = document.querySelector("#servicios");
 	if (root === null) {
 		throw new Error("Missing #servicios mount point");

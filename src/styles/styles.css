@@ -1,11 +1,11 @@
 @import "./tokens.css";
-@import "../sections/Hero/Hero.css";
-@import "../sections/Services/Services.css";
-@import "../sections/Process/Process.css";
-@import "../sections/Cases/Cases.css";
-@import "../sections/Faq/Faq.css";
-@import "../sections/Cta/Cta.css";
-@import "../sections/Footer/Footer.css";
+@import "../components/Hero/Hero.css";
+@import "../components/Services/Services.css";
+@import "../components/Process/Process.css";
+@import "../components/Cases/Cases.css";
+@import "../components/Faq/Faq.css";
+@import "../components/Cta/Cta.css";
+@import "../components/Footer/Footer.css";
 
 *,
 *::before,

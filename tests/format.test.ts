@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { formatCOP } from "../src/scripts/core/format.ts";
+import { formatCOP } from "../src/core/format.ts";
 
 describe("formatCOP", () => {
 	it("formats a landing price without decimals", () => {

@@ -3,7 +3,7 @@ import { describe, it } from "node:test";
 import {
 	buildDiagnosisMessage,
 	buildWhatsAppUrl,
-} from "../src/scripts/core/whatsapp.ts";
+} from "../src/core/whatsapp.ts";
 
 describe("buildWhatsAppUrl", () => {
 	it("builds an encoded wa.me link", () => {
