@@ -14,13 +14,14 @@
 	--dark: #181816;
 	--dark-2: #202020;
 	--ink: #111110;
-	--muted: #6b6b63;
+	--muted: #55534d;
 	--muted-on-dark: rgb(239 237 230 / 0.62);
 	--line: rgb(17 17 16 / 0.14);
 	--line-soft: rgb(17 17 16 / 0.07);
 	--line-on-dark: rgb(239 237 230 / 0.12);
 	--yellow: #f8f015;
 	--red: #e62424;
+	--red-ink: #c11717;
 	--max-width: 1440px;
 	--font-family-base: "Bricolage Grotesque", system-ui, sans-serif;
 	--font-family-mono: "JetBrains Mono", ui-monospace, monospace;
