@@ -8,12 +8,14 @@
 		"build": "tsc --noEmit && vite build",
 		"preview": "vite preview",
 		"check": "biome check .",
-		"test": "node --test tests/"
+		"test": "node --test tests/",
+		"e2e": "playwright test"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.3.0",
 		"@fontsource/bricolage-grotesque": "^5.3.0",
 		"@fontsource/jetbrains-mono": "^5.3.0",
+		"@playwright/test": "^1.64.1",
 		"@types/node": "^22.10.0",
 		"typescript": "^5.9.3",
 		"vite": "^7.2.4"
