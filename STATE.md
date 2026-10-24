@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-CI en cada push y pull request.
+Cerrar Fase 0 (verificación completa y docs al día).
 
 ## TAREAS PENDIENTES
 
