@@ -18,7 +18,7 @@ test("el enlace WhatsApp lleva el mensaje codificado", async ({ page }) => {
 		.getByRole("tabpanel")
 		.getByRole("link", { name: /^Agendar/ });
 	const href = await link.getAttribute("href");
-	expect(href).toMatch(/^https:\/\/wa\.me\/573175819723\?text=.+/);
+	expect(href).toMatch(/^https:\/\/wa\.me\/573173062346\?text=.+/);
 	expect(decodeURIComponent(href ?? "")).toContain(
 		"Desarrollo web: Landing page (desde $ 950.000).",
 	);

@@ -7,16 +7,16 @@ import {
 
 describe("buildWhatsAppUrl", () => {
 	it("builds an encoded wa.me link", () => {
-		const url: string = buildWhatsAppUrl("573175819723", "Hola, quiero info");
+		const url: string = buildWhatsAppUrl("573173062346", "Hola, quiero info");
 		assert.equal(
 			url,
-			"https://wa.me/573175819723?text=Hola%2C%20quiero%20info",
+			"https://wa.me/573173062346?text=Hola%2C%20quiero%20info",
 		);
 	});
 
 	it("strips non-digit characters from the phone", () => {
-		const url: string = buildWhatsAppUrl("+57 317 581 9723", "Hola");
-		assert.ok(url.startsWith("https://wa.me/573175819723?text="));
+		const url: string = buildWhatsAppUrl("+57 317 306 2346", "Hola");
+		assert.ok(url.startsWith("https://wa.me/573173062346?text="));
 	});
 
 	it("rejects a phone without digits", () => {

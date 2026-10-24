@@ -13,7 +13,7 @@ export interface Service {
 	plans: ServicePlan[];
 }
 
-export const WHATSAPP_NUMBER = "573175819723";
+export const WHATSAPP_NUMBER = "573173062346";
 
 export const TICKER_ITEMS: string[] = [
 	"Diseño hecho para tu marca",
