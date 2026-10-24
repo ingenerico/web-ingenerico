@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Ojo que sigue el cursor.
+Aparición al hacer scroll.
 
 ## TAREAS PENDIENTES
 
