@@ -8,6 +8,7 @@ describe("formatCOP", () => {
 		assert.ok(result.startsWith("$"));
 		assert.ok(result.includes("950.000"));
 		assert.ok(!result.includes(","));
+		assert.ok(!result.includes("\u00a0")); // sin espacios duros
 	});
 
 	it("formats zero", () => {
