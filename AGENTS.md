@@ -156,7 +156,7 @@ export interface Section<Props> {
 ```
 
 Reglas:
-- El `.html` es la fuente única del maquetado y se incrusta en `index.html` durante el build (`<!-- @include ... -->`); nunca se construye HTML por strings en el `.ts`.
+- El `.html` es la fuente única del maquetado y se incrusta en `index.html` durante el build (`<include src="..."></include>`); nunca se construye HTML por strings en el `.ts`.
 - `template.ts` solo clona nodos dinámicos que nacen de datos en tiempo de ejecución.
 - El `.css` solo toca su sección (nesting bajo su clase raíz), salvo tokens globales.
 - `destroy()` es obligatorio siempre que la sección registre listeners, observers o `requestAnimationFrame`.
