@@ -3,18 +3,87 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ingenerico — Base en construcción</title>
+    <title>Ingenerico — Web, software, animación e IA para empresas</title>
     <meta
       name="description"
-      content="Base inicial del sitio estático de Ingenerico."
+      content="Estudio colombiano de desarrollo web, software a la medida, animación de personajes e IA para empresas. Precios claros, alcance cerrado."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <main id="app">
-      <h1>Ingenerico</h1>
-      <p>Base Fase 0 en construcción.</p>
+    <div class="dark-zone">
+      <header class="topbar">
+        <div class="wrap">
+          <a class="brand" href="#" aria-label="Ingenerico">Ingenerico</a>
+          <nav class="nav" aria-label="Principal">
+            <a href="#servicios">Servicios</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#casos">Casos</a>
+            <a href="#preguntas">FAQ</a>
+          </nav>
+          <a class="btn small" href="#cotizar">Agendar →</a>
+        </div>
+      </header>
+
+      <section class="hero wrap" id="inicio">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>El software y la imagen digital de tu empresa, sin adivinar</h1>
+            <p class="lede">
+              Páginas web, software a la medida, animación de personajes e
+              inteligencia artificial para empresas. Antes de empezar sabes qué
+              recibes, cuánto cuesta y para cuándo.
+            </p>
+            <div class="acts">
+              <a
+                class="btn"
+                href="https://wa.me/573175819723?text=Hola%20Ingenerico%2C%20quiero%20agendar%20un%20diagn%C3%B3stico."
+                >Agendar diagnóstico por WhatsApp</a
+              >
+              <a class="btn ghost" href="#servicios">Ver servicios</a>
+            </div>
+          </div>
+          <div class="eye" aria-hidden="true">
+            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="200" cy="200" r="200" fill="#E62424" />
+              <ellipse
+                class="blink"
+                cx="200"
+                cy="200"
+                rx="58"
+                ry="42"
+                fill="#111110"
+              />
+              <circle id="pupila" cx="200" cy="200" r="12" fill="#EFEDE6" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Diseño hecho para tu marca</span>
+          <span>Una web en menos de una semana</span>
+          <span>Software a la medida</span>
+          <span>Animación de personajes</span>
+          <span>IA aplicada a tu negocio</span>
+          <span>Precios en pesos, sin sorpresas</span>
+          <span>Hosting, dominio y correo incluidos</span>
+          <span>Diseño hecho para tu marca</span>
+          <span>Una web en menos de una semana</span>
+          <span>Software a la medida</span>
+          <span>Animación de personajes</span>
+          <span>IA aplicada a tu negocio</span>
+          <span>Precios en pesos, sin sorpresas</span>
+          <span>Hosting, dominio y correo incluidos</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <p class="wrap">Contenido en construcción.</p>
     </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
