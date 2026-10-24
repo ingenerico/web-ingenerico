@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 test("metadatos básicos y Open Graph", async ({ page }) => {
 	await page.goto("/");
 	await expect(page).toHaveTitle(
-		"Ingenerico — Web, software, animación e IA para empresas",
+		"Ingenerico | Web | software | animación | IA para empresas",
 	);
 	const description = page.locator('meta[name="description"]');
 	await expect(description).toHaveAttribute("content", /.+precios.+/i);
