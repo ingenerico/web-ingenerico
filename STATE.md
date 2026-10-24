@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Metadatos y Open Graph.
+Accesibilidad y responsive.
 
 ## TAREAS PENDIENTES
 
