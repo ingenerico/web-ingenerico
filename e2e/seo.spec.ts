@@ -23,6 +23,12 @@ test("metadatos básicos y Open Graph", async ({ page }) => {
 		"href",
 		"/favicon.svg",
 	);
+	await expect(
+		page.locator('meta[http-equiv="Content-Security-Policy"]'),
+	).toHaveAttribute(
+		"content",
+		"default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'",
+	);
 });
 
 test("logo con dimensiones explícitas", async ({ page }) => {
