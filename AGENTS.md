@@ -201,7 +201,6 @@ ingenerico/
 │   │       ├── <Component>.ts
 │   │       ├── <Component>.html
 │   │       └── <Component>.css
-│   └── types/
 ├── tests/
 ├── e2e/
 ├── docs/
