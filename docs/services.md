@@ -10,7 +10,7 @@ El contenido estático queda en `index.html` para leerse sin JS. Los tabs cambia
 
 ## CÓMO FUNCIONA
 
-El índice marca el primer servicio. La ficha muestra entregables, plazo, planes y el enlace con el mensaje ya codificado.
+El índice marca el primer servicio. Al elegir un tab, el panel se reconstruye desde los datos con `createElement` y el enlace se recodifica con el plan elegido. Los listeners se liberan con `AbortController` en `destroy()`.
 
 ## REGLAS DE NEGOCIO
 
@@ -34,7 +34,7 @@ Enlace centralizado y validado en tests. Vale lo definido en [§5.1](../AGENTS.m
 
 ## TESTS
 
-Estático se verifica en Playwright. Datos e integridad en `tests/site.test.ts`.
+Estático y dinámico coinciden en formato. Se verifica en Playwright y con unitarios en `tests/site.test.ts`.
 
 ## ENLACES INTERNOS RELACIONADOS
 
