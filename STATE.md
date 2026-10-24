@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Maquetar hero con contenido real en HTML.
+Maquetar sección de servicios en HTML.
 
 ## TAREAS PENDIENTES
 
