@@ -1,7 +1,13 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.6.2/schema.json",
 	"files": {
-		"includes": ["**", "!ingenerico_demo.html", "!dist"]
+		"includes": [
+			"**",
+			"!dist",
+			"!test-results",
+			"!playwright-report",
+			"!ingenerico_demo.html"
+		]
 	},
 	"linter": {
 		"enabled": true,
