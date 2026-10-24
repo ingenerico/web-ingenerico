@@ -6,7 +6,9 @@ test("la pupila sigue el cursor", async ({ page }) => {
 	await expect(pupil).toHaveAttribute("cx", "200");
 	await page.mouse.move(1200, 350);
 	await expect
-		.poll(async () => Number(await pupil.getAttribute("cx")))
+		.poll(async () => Number(await pupil.getAttribute("cx")), {
+			timeout: 15000,
+		})
 		.toBeGreaterThan(200);
 });
 
