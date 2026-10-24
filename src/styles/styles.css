@@ -125,6 +125,11 @@ svg {
 	color: var(--bone);
 }
 
+.btn.full {
+	width: 100%;
+	justify-content: center;
+}
+
 .btn-outline {
 	background: transparent;
 	color: var(--bone);

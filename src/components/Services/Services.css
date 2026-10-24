@@ -42,6 +42,10 @@
 	font-weight: 500;
 }
 
+.index .tab .name {
+	line-height: 1.15;
+}
+
 .index .tab .arrow {
 	font-family: var(--font-family-mono);
 	font-size: 14px;
