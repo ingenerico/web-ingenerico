@@ -10,7 +10,7 @@ Vite genera `dist/` sin servidor de aplicación. Biome es la única herramienta 
 
 ## CÓMO FUNCIONA
 
-`index.html` compone el contenido estático y carga `src/main.ts`. Los estilos entran por `styles.css`, que importa tokens y el CSS de cada sección.
+`index.html` compone las secciones con inclusiones (`<!-- @include ... -->`) que el build incrusta desde cada plantilla. `src/main.ts` solo cablea. Los estilos entran por `styles.css`, que importa tokens y el CSS de cada sección.
 
 ## REGLAS DE NEGOCIO
 

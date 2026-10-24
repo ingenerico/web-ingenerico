@@ -156,10 +156,11 @@ export interface Section<Props> {
 ```
 
 Reglas:
-- El `.html` es la plantilla clonada por `template.ts`; nunca se construye HTML por strings en el `.ts`.
+- El `.html` es la fuente única del maquetado y se incrusta en `index.html` durante el build (`<!-- @include ... -->`); nunca se construye HTML por strings en el `.ts`.
+- `template.ts` solo clona nodos dinámicos que nacen de datos en tiempo de ejecución.
 - El `.css` solo toca su sección (nesting bajo su clase raíz), salvo tokens globales.
 - `destroy()` es obligatorio siempre que la sección registre listeners, observers o `requestAnimationFrame`.
-- El `index.html` compone secciones por puntos de montaje con `id` estable; el `main.ts` solo hace wiring, sin lógica de negocio.
+- El `index.html` compone secciones con inclusiones y puntos de montaje con `id` estable; el `main.ts` solo hace wiring, sin lógica de negocio.
 - Nada de lógica compartida copiada entre secciones: va a `src/scripts/core/`.
 
 ### 7.3. REGLA `null` VS `undefined`.
