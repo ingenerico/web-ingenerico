@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Maquetar sección de casos en HTML.
+Maquetar sección de preguntas en HTML.
 
 ## TAREAS PENDIENTES
 
