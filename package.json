@@ -12,6 +12,7 @@
 		"e2e": "playwright test"
 	},
 	"devDependencies": {
+		"@axe-core/playwright": "^4.14.0",
 		"@biomejs/biome": "^2.3.0",
 		"@fontsource/bricolage-grotesque": "^5.3.0",
 		"@fontsource/jetbrains-mono": "^5.3.0",
