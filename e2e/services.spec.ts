@@ -24,6 +24,16 @@ test("el enlace WhatsApp lleva el mensaje codificado", async ({ page }) => {
 	);
 });
 
+test("pestañas apiladas en móvil sin scroll lateral", async ({ page }) => {
+	await page.setViewportSize({ width: 375, height: 667 });
+	await page.goto("/");
+	const overflow = await page
+		.locator(".index")
+		.evaluate((element) => element.scrollWidth - element.clientWidth);
+	expect(overflow).toBeLessThanOrEqual(0);
+	await expect(page.getByRole("tab").nth(3)).toBeVisible();
+});
+
 test("las flechas del teclado cambian de tab", async ({ page }) => {
 	await page.goto("/");
 	const tabs = page.getByRole("tab");

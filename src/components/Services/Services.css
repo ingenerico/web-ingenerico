@@ -7,32 +7,27 @@
 .index {
 	border-bottom: 1px solid var(--line);
 	display: flex;
-	overflow-x: auto;
-	gap: 0;
-	scrollbar-width: none;
-
-	&::-webkit-scrollbar {
-		display: none;
-	}
+	flex-direction: column;
 }
 
 .index .tab {
 	display: grid;
-	grid-template-columns: auto auto auto;
-	gap: 10px;
+	grid-template-columns: 32px 1fr 20px;
+	gap: 12px;
 	align-items: baseline;
-	min-width: max-content;
+	width: 100%;
 	text-align: left;
-	padding: 18px;
+	padding: 18px 0;
 	background: none;
 	border: 0;
-	border-right: 1px solid var(--line-soft);
+	border-bottom: 1px solid var(--line-soft);
 	font-weight: 600;
 	font-size: 17px;
 	letter-spacing: -0.015em;
 	color: var(--muted);
-	transition: color 0.18s;
-	white-space: nowrap;
+	transition:
+		color 0.18s,
+		background-color 0.18s;
 }
 
 .index .tab .num {
@@ -246,18 +241,10 @@
 	.index {
 		border-right: 1px solid var(--line);
 		border-bottom: 0;
-		flex-direction: column;
-		overflow: visible;
 	}
 
 	.index .tab {
-		grid-template-columns: 32px 1fr 20px;
-		gap: 12px;
-		width: 100%;
 		padding: 22px 22px 22px 0;
-		border-right: 0;
-		border-bottom: 1px solid var(--line-soft);
-		white-space: normal;
 	}
 
 	.index .tab[aria-selected="true"] {
