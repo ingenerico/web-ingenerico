@@ -1,4 +1,5 @@
 @import "./tokens.css";
+@import "../components/Topbar/Topbar.css";
 @import "../components/Hero/Hero.css";
 @import "../components/Services/Services.css";
 @import "../components/Process/Process.css";

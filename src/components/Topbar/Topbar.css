@@ -1,0 +1,148 @@
+.topbar {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: rgb(24 24 22 / 0.88);
+	backdrop-filter: blur(18px) saturate(1.2);
+	border-bottom: 1px solid var(--line-on-dark);
+	color: var(--bone);
+
+	& .wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		height: 60px;
+		position: relative;
+	}
+}
+
+.brand {
+	display: inline-flex;
+	flex: none;
+}
+
+.brand img {
+	height: 28px;
+	width: auto;
+}
+
+.topbar-actions {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex: none;
+}
+
+.topbar .btn {
+	padding: 11px 14px;
+	font-size: 11px;
+}
+
+.menu-button {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: 1px solid rgb(239 237 230 / 0.4);
+	border-radius: 6px;
+
+	& span {
+		display: block;
+		width: 18px;
+		height: 2px;
+		background: var(--bone);
+		transition: transform 0.2s;
+	}
+}
+
+.topbar.is-open .menu-button span:first-child {
+	transform: translateY(4px) rotate(45deg);
+}
+
+.topbar.is-open .menu-button span:last-child {
+	transform: translateY(-4px) rotate(-45deg);
+}
+
+.nav {
+	display: none;
+}
+
+.topbar.is-open .nav {
+	display: flex;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	flex-direction: column;
+	background: var(--dark);
+	border-bottom: 1px solid var(--line-on-dark);
+	padding: 8px 24px 20px;
+	gap: 0;
+}
+
+.topbar.is-open .nav a {
+	font-family: var(--font-family-mono);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--muted-on-dark);
+	padding: 14px 0;
+	border-top: 1px solid var(--line-on-dark);
+}
+
+.topbar.is-open .nav a:hover {
+	color: var(--bone);
+}
+
+@media (width > 820px) {
+	.brand img {
+		height: 34px;
+	}
+
+	.menu-button {
+		display: none;
+	}
+
+	.nav {
+		display: flex;
+		gap: 26px;
+		font-family: var(--font-family-mono);
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		color: var(--muted-on-dark);
+
+		& a {
+			position: relative;
+			transition: color 0.15s;
+		}
+
+		& a:hover {
+			color: var(--bone);
+		}
+
+		& a::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -3px;
+			width: 0;
+			height: 1px;
+			background: var(--yellow);
+			transition: width 0.2s;
+		}
+
+		& a:hover::after {
+			width: 100%;
+		}
+	}
+
+	.topbar .wrap {
+		height: 68px;
+	}
+}

@@ -3,43 +3,6 @@
 	color: var(--bone);
 }
 
-.topbar {
-	position: sticky;
-	top: 0;
-	z-index: 1;
-	background: rgb(24 24 22 / 0.88);
-	backdrop-filter: blur(18px) saturate(1.2);
-	border-bottom: 1px solid var(--line-on-dark);
-	color: var(--bone);
-
-	& .wrap {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		height: 60px;
-	}
-}
-
-.brand {
-	display: inline-flex;
-	flex: none;
-}
-
-.brand img {
-	height: 28px;
-	width: auto;
-}
-
-.nav {
-	display: none;
-}
-
-.topbar .btn {
-	padding: 11px 14px;
-	font-size: 11px;
-}
-
 .hero {
 	padding: 32px 0 48px;
 }
@@ -140,50 +103,6 @@
 @keyframes ticker-move {
 	to {
 		transform: translateX(-50%);
-	}
-}
-
-@media (width > 820px) {
-	.brand img {
-		height: 34px;
-	}
-
-	.nav {
-		display: flex;
-		gap: 26px;
-		font-family: var(--font-family-mono);
-		font-size: 11px;
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		color: var(--muted-on-dark);
-
-		& a {
-			position: relative;
-			transition: color 0.15s;
-		}
-
-		& a:hover {
-			color: var(--bone);
-		}
-
-		& a::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			bottom: -3px;
-			width: 0;
-			height: 1px;
-			background: var(--yellow);
-			transition: width 0.2s;
-		}
-
-		& a:hover::after {
-			width: 100%;
-		}
-	}
-
-	.topbar .wrap {
-		height: 68px;
 	}
 }
 

@@ -5,9 +5,11 @@ import { renderFooter } from "./components/Footer/Footer.ts";
 import { renderHero } from "./components/Hero/Hero.ts";
 import { renderProcess } from "./components/Process/Process.ts";
 import { renderServices } from "./components/Services/Services.ts";
+import { renderTopbar } from "./components/Topbar/Topbar.ts";
 import { initReveal } from "./core/reveal.ts";
 import "./styles/styles.css";
 
+renderTopbar();
 renderHero();
 renderServices();
 renderProcess();
