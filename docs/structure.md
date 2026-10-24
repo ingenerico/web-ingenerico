@@ -10,11 +10,11 @@ Vite genera `dist/` sin servidor de aplicación. Biome es la única herramienta 
 
 ## CÓMO FUNCIONA
 
-`index.html` monta `#app` y carga `src/main.ts`. Los estilos globales entran por `tokens.css` y `styles.css`.
+`index.html` compone el contenido estático y carga `src/main.ts`. Los estilos entran por `styles.css`, que importa tokens y el CSS de cada sección.
 
 ## REGLAS DE NEGOCIO
 
-Sin contenido real todavía. La referencia visual vive en `ingenerico_demo.html` hasta la Fase 1.
+Hero con contenido real en `index.html`. La referencia visual sigue en `ingenerico_demo.html` para las secciones pendientes.
 
 ## SEGURIDAD ESPECÍFICA
 
@@ -22,23 +22,24 @@ Sin datos ni enlaces externos en esta base. Vale lo definido en [§5.1](../AGENT
 
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
 
-| Ruta                | Rol                               |
-| ------------------- | --------------------------------- |
-| `index.html`        | Entrada y punto de montaje `#app` |
-| `src/main.ts`       | Cableado inicial                  |
-| `src/styles/`       | Tokens y estilos globales         |
-| `src/scripts/core/` | Helpers compartidos               |
-| `src/scripts/data/` | Datos tipados del sitio           |
-| `public/`           | Archivos estáticos                |
+| Ruta                | Rol                                  |
+| ------------------- | ------------------------------------ |
+| `index.html`        | Entrada y contenido estático         |
+| `src/main.ts`       | Cableado inicial                     |
+| `src/styles/`       | Tokens y estilos globales            |
+| `src/sections/`     | Estilos y comportamiento por sección |
+| `src/scripts/core/` | Helpers compartidos                  |
+| `src/scripts/data/` | Datos tipados del sitio              |
+| `public/`           | Archivos estáticos                   |
 
 ## TESTS
 
-| Comando                   | Qué cubre                            |
-| ------------------------- | ------------------------------------ |
-| `pnpm exec biome check .` | Lint y formato                       |
-| `pnpm exec tsc --noEmit`  | Tipado estricto                      |
-| `node --test tests/`      | Unitarios (`tests/` vacío por ahora) |
-| `pnpm exec vite build`    | Salida en `dist/`                    |
+| Comando                   | Qué cubre                    |
+| ------------------------- | ---------------------------- |
+| `pnpm exec biome check .` | Lint y formato               |
+| `pnpm exec tsc --noEmit`  | Tipado estricto              |
+| `node --test tests/`      | Unitarios de helpers y datos |
+| `pnpm exec vite build`    | Salida en `dist/`            |
 
 ## ENLACES INTERNOS RELACIONADOS
 
