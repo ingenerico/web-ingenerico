@@ -16,7 +16,7 @@ Maquetado estático en `index.html` sin comportamiento.
 
 | Regla               | Detalle                          |
 | ------------------- | -------------------------------- |
-| Preguntas           | Cuatro, con la primera abierta   |
+| Preguntas           | Tres, con la primera abierta     |
 | Precios mencionados | Formato COP con espacio tras `$` |
 
 ## SEGURIDAD ESPECÍFICA
