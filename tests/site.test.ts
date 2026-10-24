@@ -1,8 +1,20 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { SERVICES, WHATSAPP_NUMBER } from "../src/scripts/data/site.ts";
+import {
+	SERVICES,
+	TICKER_ITEMS,
+	WHATSAPP_NUMBER,
+} from "../src/scripts/data/site.ts";
 
 describe("site data", () => {
+	it("lists ticker items without duplicates", () => {
+		assert.ok(TICKER_ITEMS.length > 0);
+		for (const item of TICKER_ITEMS) {
+			assert.ok(item.length > 0);
+		}
+		assert.equal(new Set(TICKER_ITEMS).size, TICKER_ITEMS.length);
+	});
+
 	it("exposes a digits-only WhatsApp number", () => {
 		assert.match(WHATSAPP_NUMBER, /^\d+$/);
 	});

@@ -15,6 +15,16 @@ export interface Service {
 
 export const WHATSAPP_NUMBER = "573175819723";
 
+export const TICKER_ITEMS: string[] = [
+	"Diseño hecho para tu marca",
+	"Una web en menos de una semana",
+	"Software a la medida",
+	"Animación de personajes",
+	"IA aplicada a tu negocio",
+	"Precios en pesos, sin sorpresas",
+	"Hosting, dominio y correo incluidos",
+];
+
 export const SERVICES: Service[] = [
 	{
 		id: "web",

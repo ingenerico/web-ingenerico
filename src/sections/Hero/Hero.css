@@ -116,7 +116,6 @@
 	display: flex;
 	white-space: nowrap;
 	width: max-content;
-	animation: ticker-move 46s linear infinite;
 
 	& span {
 		font-family: var(--font-family-mono);
@@ -222,12 +221,12 @@
 	}
 }
 
+.ticker.is-looping .ticker-track {
+	animation: ticker-move 46s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	.blink {
-		animation: none;
-	}
-
-	.ticker-track {
 		animation: none;
 	}
 }

@@ -1,3 +1,5 @@
+import { TICKER_ITEMS } from "../../scripts/data/site.ts";
+
 export interface HeroSection {
 	readonly root: HTMLElement;
 	destroy(): void;
@@ -10,6 +12,24 @@ const MAX_Y = 14;
 const FOLLOW_DISTANCE = 340;
 const EASE = 0.14;
 const STOP_THRESHOLD = 0.3;
+
+function buildTicker(allowMotion: boolean): void {
+	const track = document.querySelector(".ticker-track");
+	const ticker = track?.closest(".ticker") ?? null;
+	if (track === null || ticker === null) {
+		return;
+	}
+	const spans = TICKER_ITEMS.map((text) => {
+		const span = document.createElement("span");
+		span.textContent = text;
+		return span;
+	});
+	track.append(...spans);
+	if (allowMotion) {
+		track.append(...spans.map((span) => span.cloneNode(true)));
+		ticker.classList.add("is-looping");
+	}
+}
 
 export function renderHero(): HeroSection {
 	const root: HTMLElement | null = document.querySelector("#inicio");
@@ -65,6 +85,8 @@ export function renderHero(): HeroSection {
 			{ signal: controller.signal },
 		);
 	}
+
+	buildTicker(!reduceMotion);
 
 	return {
 		root,
