@@ -2,13 +2,13 @@
 
 ## MAPA DE FASES
 
-| Fase | Nombre         | Cierre                                                               | Estado     |
-| ---- | -------------- | -------------------------------------------------------------------- | ---------- |
-| 0    | Fundamentos    | Estructura base, tokens, helpers, datos tipados, CI y build en verde | En curso   |
-| 1    | Contenido base | Hero, servicios, proceso, casos, FAQ, CTA y footer en HTML real      | Pendiente  |
-| 2    | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta            | Pendiente  |
-| 3    | Pulido         | SEO, accesibilidad, responsive e imágenes                            | Pendiente  |
-| 4    | Producción     | Checklist final y publicación estática                               | Pendiente  |
+| Fase | Nombre         | Cierre                                                               | Estado    |
+| ---- | -------------- | -------------------------------------------------------------------- | --------- |
+| 0    | Fundamentos    | Estructura base, tokens, helpers, datos tipados, CI y build en verde | En curso  |
+| 1    | Contenido base | Hero, servicios, proceso, casos, FAQ, CTA y footer en HTML real      | Pendiente |
+| 2    | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta            | Pendiente |
+| 3    | Pulido         | SEO, accesibilidad, responsive e imágenes                            | Pendiente |
+| 4    | Producción     | Checklist final y publicación estática                               | Pendiente |
 
 ## REGLAS DE TAREAS
 
@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Crear tokens, estilos base, helper de plantilla, iconos y datos del sitio.
+CI en cada push y pull request.
 
 ## TAREAS PENDIENTES
 
