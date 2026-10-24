@@ -48,6 +48,8 @@ Detalle completo en `AGENTS.md` y `docs/`.
 
 Se publica `dist/` con solo archivos estáticos.
 
+La reversión es republicar el despliegue anterior desde el panel del hosting.
+
 ## ENLACES
 
 - Reglas: `AGENTS.md`
