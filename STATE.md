@@ -2,15 +2,16 @@
 
 ## MAPA DE FASES
 
-| Fase | Nombre | Cierre |
-|---|---|---|
-| 0 | Fundamentos | Estructura base, tokens, helpers, datos tipados, CI y build en verde |
-| 1 | Contenido base | Hero, servicios, proceso, casos, FAQ, CTA y footer en HTML real |
-| 2 | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta |
-| 3 | Pulido | SEO, accesibilidad, responsive e imágenes |
-| 4 | Producción | Checklist final y publicación estática |
+| Fase | Nombre         | Cierre                                                               |
+| ---- | -------------- | -------------------------------------------------------------------- |
+| 0    | Fundamentos    | Estructura base, tokens, helpers, datos tipados, CI y build en verde |
+| 1    | Contenido base | Hero, servicios, proceso, casos, FAQ, CTA y footer en HTML real      |
+| 2    | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta            |
+| 3    | Pulido         | SEO, accesibilidad, responsive e imágenes                            |
+| 4    | Producción     | Checklist final y publicación estática                               |
 
 ## REGLAS DE TAREAS
+
 - Se trabaja una tarea en especifico solamente.
 - Cada tarea finalizada se elimina del archivo.
 - No se incrementa el mapa de fases en ningún momento.
@@ -24,14 +25,11 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Inicializar base Vite + TypeScript + Biome con la estructura mínima y el build en verde.
+Crear tokens, estilos base, helper de plantilla, iconos y datos del sitio.
 
 ## TAREAS PENDIENTES
 
-- Crear tokens, estilos base, helper de plantilla, iconos y datos del sitio.
 - Maquetar contenido base en HTML.
 - Implementar interactividad de secciones.
 - Aplicar pulido de SEO, accesibilidad y rendimiento.
 - Preparar publicación final.
-
-

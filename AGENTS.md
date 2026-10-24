@@ -5,7 +5,6 @@ Este es el punto de entrada obligatorio. Léelo completo antes de escribir una s
 ## 0. PROTOCOLO DE PROYECTO Y AMPLIACIONES.
 
 Sigue este orden siempre, sin saltarte pasos:
-
 - Lee este archivo completo.
 - Lee `STATE.md` para saber en qué fase va el proyecto, qué está hecho y cuál es la siguiente tarea concreta.
 - Si vas a tocar una funcionalidad que ya existe, lee su documento en `docs/<funcionalidad>.md` antes de modificar código. Ese archivo es la fuente de verdad de cómo y por qué se implementó así.
@@ -17,7 +16,6 @@ Sigue este orden siempre, sin saltarte pasos:
 ## 1. CICLO DE DESARROLLO OBLIGATORIO.
 
 Toda tarea sigue este orden, sin saltos:
-
 - **Investigar** — entender el problema y el estado actual antes de tocar nada.
 - **Planear** — definir el cambio mínimo que resuelve el problema.
 - **Ejecutar** — implementar siguiendo [§5](#5-reglas-innegociables)–[§11](#11-seo-rendimiento-accesibilidad-y-compatibilidad).
@@ -36,12 +34,19 @@ Cada `docs/<tema>.md` cubre un tema por archivo (Secciones, Estructura, Estilos,
 # <NOMBRE DEL TEMA>
 
 ## QUÉ HACE
+
 ## POR QUÉ SE IMPLEMENTÓ ASÍ
+
 ## CÓMO FUNCIONA
+
 ## REGLAS DE NEGOCIO
+
 ## SEGURIDAD ESPECÍFICA
+
 ## ARCHIVOS / SECCIONES / EVENTOS INVOLUCRADOS
+
 ## TESTS
+
 ## ENLACES INTERNOS RELACIONADOS
 ```
 
@@ -54,7 +59,6 @@ Se debe trabajar **una tarea concreta por sesión**, salvo que `STATE.md` indiqu
 No se empieza una funcionalidad de una fase posterior si la fase actual no tiene su criterio de cierre cumplido.
 
 Si aparece deuda técnica, se registra en `STATE.md` con:
-
 - problema;
 - impacto;
 - decisión temporal;
@@ -75,7 +79,7 @@ Solo menciona una ruta o fragmento de código cuando sea imprescindible para ubi
 - `!important` en CSS.
 - `localStorage` / `sessionStorage` salvo justificación explícita registrada en `docs/` y `STATE.md`. Por defecto el estado vive en memoria y en la URL.
 - Duplicar código: si vas a copiar/pegar una función, estilo o sección, extráelo a un módulo compartido.
-- `any` en TypeScript (usa `unknown` + *type guard*, o modela el tipo real).
+- `any` en TypeScript (usa `unknown` + _type guard_, o modela el tipo real).
 - `null` sin control estrecho. Ver [§7.3](#73-regla-null-vs-undefined).
 - `// @ts-ignore`, `// @ts-expect-error` o supresiones globales sin justificación.
 - Añadir Vue, React, Angular, Next.js, Svelte, librerías de estado, frameworks CSS o kits de componentes. Vanilla puro.
@@ -98,20 +102,20 @@ Solo menciona una ruta o fragmento de código cuando sea imprescindible para ubi
 
 ## 6. STACK.
 
-| Área | Decisión | Regla |
-|---|---|---|
-| Marcado | HTML5 semántico | Usar elementos nativos antes de crear soluciones propias. Contenido crítico siempre en HTML, no inyectado por JS. |
-| Estilos | CSS moderno puro | Variables CSS para tokens, nesting nativo, media queries modernas. Sin frameworks. |
-| Interactividad | TypeScript vanilla sin framework | Solo para comportamientos que lo necesiten. Sin dependencias de runtime. |
-| Herramienta y build | Vite | Entorno local y generación de `dist/`. |
-| Gestor de paquetes | pnpm | Mantener un solo gestor y versionar `pnpm-lock.yaml`. |
-| Fuentes | Fontsource | Paquetes `@fontsource/*` importados una vez al inicio del CSS global. Prohibido CDN externo. |
-| Iconos | Lucide vía helper propio | `src/scripts/core/icons.ts` con `createIcon` + `createElementNS`. Sin set completo ni `innerHTML`. |
-| Lint/formato | Biome | Una sola herramienta para TS/CSS/JSON. |
-| Tests unitarios | `node:test` | Helpers y lógica pura (formato de precios, construcción de enlaces, datos). |
-| Tests de flujo | Playwright | Tabs de servicios, enlace WhatsApp, FAQ, navegación por anclas, responsive. |
-| CI | GitHub Actions | Obligatorio en cada push y pull request. |
-| Publicación | Hosting estático | Se publica `dist/` con solo archivos estáticos. |
+| Área                | Decisión                         | Regla                                                                                                             |
+| ------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Marcado             | HTML5 semántico                  | Usar elementos nativos antes de crear soluciones propias. Contenido crítico siempre en HTML, no inyectado por JS. |
+| Estilos             | CSS moderno puro                 | Variables CSS para tokens, nesting nativo, media queries modernas. Sin frameworks.                                |
+| Interactividad      | TypeScript vanilla sin framework | Solo para comportamientos que lo necesiten. Sin dependencias de runtime.                                          |
+| Herramienta y build | Vite                             | Entorno local y generación de `dist/`.                                                                            |
+| Gestor de paquetes  | pnpm                             | Mantener un solo gestor y versionar `pnpm-lock.yaml`.                                                             |
+| Fuentes             | Fontsource                       | Paquetes `@fontsource/*` importados una vez al inicio del CSS global. Prohibido CDN externo.                      |
+| Iconos              | Lucide vía helper propio         | `src/scripts/core/icons.ts` con `createIcon` + `createElementNS`. Sin set completo ni `innerHTML`.                |
+| Lint/formato        | Biome                            | Una sola herramienta para TS/CSS/JSON.                                                                            |
+| Tests unitarios     | `node:test`                      | Helpers y lógica pura (formato de precios, construcción de enlaces, datos).                                       |
+| Tests de flujo      | Playwright                       | Tabs de servicios, enlace WhatsApp, FAQ, navegación por anclas, responsive.                                       |
+| CI                  | GitHub Actions                   | Obligatorio en cada push y pull request.                                                                          |
+| Publicación         | Hosting estático                 | Se publica `dist/` con solo archivos estáticos.                                                                   |
 
 No añadir frameworks, librerías de estado ni CSS externo para esta fase. Si una necesidad parece exigirlo, se registra como deuda y se decide explícitamente, no se improvisa.
 
@@ -146,13 +150,12 @@ Toda sección implementa:
 
 ```typescript
 export interface Section<Props> {
-  render(props: Props): HTMLElement;
-  destroy(): void;
+	render(props: Props): HTMLElement;
+	destroy(): void;
 }
 ```
 
 Reglas:
-
 - El `.html` es la plantilla clonada por `template.ts`; nunca se construye HTML por strings en el `.ts`.
 - El `.css` solo toca su sección (nesting bajo su clase raíz), salvo tokens globales.
 - `destroy()` es obligatorio siempre que la sección registre listeners, observers o `requestAnimationFrame`.
@@ -217,7 +220,6 @@ ingenerico/
 ### 10.2. FLUJOS (Playwright).
 
 Mínimo antes de lanzar:
-
 1. navegación por anclas sin roturas;
 2. tabs de servicios cambian panel y marcan `aria-selected`;
 3. enlace WhatsApp lleva mensaje con servicio/plan codificado;
@@ -228,7 +230,6 @@ Mínimo antes de lanzar:
 ### 10.3. CI.
 
 GitHub Actions ejecuta en cada push y pull request:
-
 1. `biome check`;
 2. `tsc --noEmit`;
 3. tests unitarios;
@@ -250,20 +251,19 @@ Un PR no se considera listo si CI está en rojo.
 
 ## 12. FASES Y CRITERIOS DE CIERRE.
 
-| Fase | Nombre | Cierre obligatorio |
-|---|---|---|
-| 0 | Fundamentos | estructura [§9](#9-estructura-del-proyecto) + tokens + template/icons + datos tipados + CI + build en verde |
-| 1 | Contenido base | hero, servicios, proceso, casos, FAQ, CTA, footer con contenido real en HTML |
-| 2 | Interactividad | tabs, ojo/pupila con `rAF`, reveal con `IntersectionObserver`, enlace WhatsApp dinámico, todo con `destroy()` |
-| 3 | Pulido | SEO/OG, a11y teclado/foco/motion, responsive sin overflow, rendimiento e imágenes |
-| 4 | Producción | checklist [§13](#13-checklist-de-lanzamiento) en verde + `dist/` publicado detrás de HTTPS |
+| Fase | Nombre         | Cierre obligatorio                                                                                            |
+| ---- | -------------- | ------------------------------------------------------------------------------------------------------------- |
+| 0    | Fundamentos    | estructura [§9](#9-estructura-del-proyecto) + tokens + template/icons + datos tipados + CI + build en verde   |
+| 1    | Contenido base | hero, servicios, proceso, casos, FAQ, CTA, footer con contenido real en HTML                                  |
+| 2    | Interactividad | tabs, ojo/pupila con `rAF`, reveal con `IntersectionObserver`, enlace WhatsApp dinámico, todo con `destroy()` |
+| 3    | Pulido         | SEO/OG, a11y teclado/foco/motion, responsive sin overflow, rendimiento e imágenes                             |
+| 4    | Producción     | checklist [§13](#13-checklist-de-lanzamiento) en verde + `dist/` publicado detrás de HTTPS                    |
 
 Una fase se cierra solo cuando su código, tests, documentación, `README.md` y `STATE.md` están actualizados.
 
 ## 13. CHECKLIST DE LANZAMIENTO.
 
 Antes de producción, además de [§10.3](#103-ci) y [§11](#11-seo-rendimiento-accesibilidad-y-compatibilidad) en verde:
-
 - Sin violaciones de [§5.1](#51-prohibido-sin-excepción) en bundle ni build.
 - Título/descripción/OG verificados, favicon e imágenes locales.
 - HTTPS activo, cabeceras/CSP del hosting revisadas.

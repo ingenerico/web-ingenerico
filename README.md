@@ -4,14 +4,14 @@ Sitio estático del estudio: servicios, proceso, casos, preguntas y contacto por
 
 ## FUNCIONALIDADES
 
-| Sección | Contenido |
-|---|---|
-| Hero | Titular, descripción y dos llamados a la acción |
+| Sección   | Contenido                                               |
+| --------- | ------------------------------------------------------- |
+| Hero      | Titular, descripción y dos llamados a la acción         |
 | Servicios | Índice por servicio con ficha, planes y enlace WhatsApp |
-| Proceso | Pasos de trabajo en cuatro etapas |
-| Casos | Trabajos recientes con problema, solución y resultado |
-| Preguntas | Respuestas directas antes de decidir |
-| Cierre | Banda de contacto y pie con datos del estudio |
+| Proceso   | Pasos de trabajo en cuatro etapas                       |
+| Casos     | Trabajos recientes con problema, solución y resultado   |
+| Preguntas | Respuestas directas antes de decidir                    |
+| Cierre    | Banda de contacto y pie con datos del estudio           |
 
 ## ESTRUCTURA
 
@@ -38,12 +38,12 @@ Detalle completo en `AGENTS.md` y `docs/`.
 
 ## DESARROLLO LOCAL
 
-| Paso | Comando |
-|---|---|
-| Instalar | `pnpm install` |
-| Servidor | `pnpm dev` |
+| Paso      | Comando                    |
+| --------- | -------------------------- |
+| Instalar  | `pnpm install`             |
+| Servidor  | `pnpm dev`                 |
 | Verificar | `pnpm check` + `pnpm test` |
-| Construir | `pnpm build` |
+| Construir | `pnpm build`               |
 
 ## PUBLICACIÓN
 
