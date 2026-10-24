@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { defineConfig, type Plugin } from "vite";
 
-const INCLUDE_PATTERN = /<!--\s*@include\s+([^\s]+)\s*-->/g;
+const INCLUDE_PATTERN = /<include\s+src="([^"]+)"\s*(?:\/>|>\s*<\/include>)/g;
 
 function inlinePartials(html: string, root: string): string {
 	return html.replace(INCLUDE_PATTERN, (_match, relativePath: string) => {
