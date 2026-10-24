@@ -1,3 +1,6 @@
+@import "./tokens.css";
+@import "../sections/Hero/Hero.css";
+
 *,
 *::before,
 *::after {
@@ -41,6 +44,67 @@ svg {
 :focus-visible {
 	outline: 3px solid var(--red);
 	outline-offset: 3px;
+}
+
+.wrap {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 18px;
+}
+
+.mono {
+	font-family: var(--font-family-mono);
+	font-size: 11px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+.display {
+	font-weight: 800;
+	line-height: 0.94;
+	letter-spacing: -0.035em;
+	margin: 0;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	background: var(--ink);
+	color: var(--bone);
+	font: 600 12px var(--font-family-mono);
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	padding: 13px 20px;
+	border-radius: 6px;
+	border: 1px solid var(--ink);
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.btn:hover {
+	background: var(--red);
+	border-color: var(--red);
+	color: #fff;
+}
+
+.btn.ghost {
+	background: transparent;
+	color: var(--bone);
+	border-color: rgb(239 237 230 / 0.4);
+}
+
+.btn.ghost:hover {
+	background: var(--bone);
+	color: var(--ink);
+	border-color: var(--bone);
+}
+
+@media (width > 768px) {
+	.wrap {
+		padding: 0 48px;
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {
