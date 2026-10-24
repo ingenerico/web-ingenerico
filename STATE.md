@@ -5,8 +5,8 @@
 | Fase | Nombre         | Cierre                                                               | Estado    |
 | ---- | -------------- | -------------------------------------------------------------------- | --------- |
 | 0    | Fundamentos    | Estructura base, tokens, helpers, datos tipados, CI y build en verde | Cerrada   |
-| 1    | Contenido base | Hero, servicios, proceso, casos, FAQ, CTA y footer en HTML real      | En curso  |
-| 2    | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta            | Pendiente |
+| 1    | Contenido base | Hero, servicios, proceso, casos, FAQ, CTA y footer en HTML real      | Cerrada   |
+| 2    | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta            | En curso  |
 | 3    | Pulido         | SEO, accesibilidad, responsive e imágenes                            | Pendiente |
 | 4    | Producción     | Checklist final y publicación estática                               | Pendiente |
 
@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Maquetar cierre y pie en HTML.
+Interactividad de tabs de servicios.
 
 ## TAREAS PENDIENTES
 
