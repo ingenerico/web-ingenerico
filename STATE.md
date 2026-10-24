@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Accesibilidad y responsive.
+Rendimiento e imágenes.
 
 ## TAREAS PENDIENTES
 
