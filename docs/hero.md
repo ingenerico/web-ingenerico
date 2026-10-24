@@ -2,7 +2,7 @@
 
 ## QUÉ HACE
 
-Portada con titular, llamados y un ojo cuya pupila sigue el cursor.
+Portada con titular, llamado a ver servicios y un ojo cuya pupila sigue el cursor.
 
 ## POR QUÉ SE IMPLEMENTÓ ASÍ
 
