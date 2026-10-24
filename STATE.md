@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Interactividad de tabs de servicios.
+Ojo que sigue el cursor.
 
 ## TAREAS PENDIENTES
 
