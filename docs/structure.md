@@ -14,7 +14,7 @@ Vite genera `dist/` sin servidor de aplicación. Biome es la única herramienta 
 
 ## REGLAS DE NEGOCIO
 
-Hero con contenido real en `index.html`. La referencia visual sigue en `ingenerico_demo.html` para las secciones pendientes.
+Hero con contenido real en su plantilla. Las secciones restantes se migraron al mismo modelo.
 
 ## SEGURIDAD ESPECÍFICA
 
