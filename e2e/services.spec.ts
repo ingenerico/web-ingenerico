@@ -16,7 +16,7 @@ test("el enlace WhatsApp lleva el mensaje codificado", async ({ page }) => {
 	await page.goto("/");
 	const link = page
 		.getByRole("tabpanel")
-		.getByRole("link", { name: /WhatsApp/ });
+		.getByRole("link", { name: /^Agendar/ });
 	const href = await link.getAttribute("href");
 	expect(href).toMatch(/^https:\/\/wa\.me\/573175819723\?text=.+/);
 	expect(decodeURIComponent(href ?? "")).toContain(

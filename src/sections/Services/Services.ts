@@ -78,7 +78,7 @@ function buildSpec(service: Service, selectedPlan: number): HTMLElement {
 
 	const link = document.createElement("a");
 	link.className = "btn btn-yellow full";
-	link.textContent = "Agendar por WhatsApp →";
+	link.textContent = "Agendar →";
 
 	const updateLink = (planIndex: number): void => {
 		link.href = contactUrl(service, planIndex);
