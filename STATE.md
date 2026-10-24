@@ -6,8 +6,8 @@
 | ---- | -------------- | -------------------------------------------------------------------- | --------- |
 | 0    | Fundamentos    | Estructura base, tokens, helpers, datos tipados, CI y build en verde | Cerrada   |
 | 1    | Contenido base | Hero, servicios, proceso, casos, FAQ, CTA y footer en HTML real      | Cerrada   |
-| 2    | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta            | En curso  |
-| 3    | Pulido         | SEO, accesibilidad, responsive e imágenes                            | Pendiente |
+| 2    | Interactividad | Tabs, ojo, reveal y enlace WhatsApp con limpieza correcta            | Cerrada   |
+| 3    | Pulido         | SEO, accesibilidad, responsive e imágenes                            | En curso  |
 | 4    | Producción     | Checklist final y publicación estática                               | Pendiente |
 
 ## REGLAS DE TAREAS
@@ -25,7 +25,7 @@ Vacía por ahora. Solo se anota o ejecuta bajo orden del desarrollador.
 
 ## SIGUIENTE TAREA CONCRETA
 
-Aparición al hacer scroll.
+Metadatos y Open Graph.
 
 ## TAREAS PENDIENTES
 
